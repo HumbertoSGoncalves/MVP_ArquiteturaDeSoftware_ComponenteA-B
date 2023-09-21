@@ -1,0 +1,342 @@
+body,
+ul,
+
+/* Define a margem e o padding padrão */
+li {
+    font-family: tahoma; /* Define a fonte do texto */
+    box-sizing: border-box; /* Define o box-sizing como border-box */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+    background-color: #722f37; /* Define a cor de fundo */
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: rgb(0, 0, 0); /* Define a cor de fundo */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    position: relative; /* Define a posição como relativa */
+    width: 100%; /* Define a largura como 100% */
+}
+
+/* Estilo para o título do cabeçalho */
+.title {
+    color: white; /* Define a cor do texto */
+    width: 100%; /* Define a largura como 100% */
+    background-color: #000000; /* Define a cor de fundo */
+    display: inline-block; /* Define o display como inline-block */
+    padding: 2px 0px; /* Define o espaçamento interno */
+    position: sticky; /* Define a posição como fixa */
+    top: 0px; /* Define a distância do topo como 0px */
+    font-size:larger; /* Define o tamanho da fonte */
+}
+
+/* Estilo para o subtítulo do cabeçalho */
+.banner {
+    display: flex; /* Adiciona o efeito de linha */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    height: 300px; /* Define a altura como 300px */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa a altura */
+}
+
+/* Estilo para a imagem do cabeçalho */
+.banner img {
+    max-width: 150%; /* Define a largura máxima como 150% */
+    max-height: 150%; /* Define a altura máxima como 150% */
+    object-fit: cover; /* Define o modo de ajuste como cover */
+}
+
+/* Estilo para a barra de navegação */
+.newItem {
+    background-color: rgb(0, 0, 0); /* Define a cor de fundo */
+    padding: 30px 40px; /* Define o espaçamento interno */
+    color: white; /* Define a cor do texto */
+    display: flex; /* Adiciona o efeito de linha */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Estilo para o link da barra de navegação */
+.newItem:after {
+    content: ""; /* Adiciona um conteúdo */
+    display: table; /* Define o display como table */
+    clear: both; /* Limpa o conteúdo */
+}
+
+/* Estilo para o link da barra de navegação */
+#newVinho {
+    margin: 0; /* Remove a margem padrão */
+    border: 1px solid rgb(35, 32, 24); /* Define a borda */
+    width: 25%; /* Define a largura como 25% */
+    padding: 10px; /* Define o espaçamento interno */
+    font-size: 25px; /* Define o tamanho da fonte */
+    font-weight: bold; /* Define o peso da fonte */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+/* Estilo para o link da barra de navegação */
+#newUva {
+    margin: 0; /* Remove a margem padrão */
+    border: 1px solid rgb(35, 32, 24); /* Define a borda */
+    width: 25%; /* Define a largura como 25% */
+    padding: 10px; /* Define o espaçamento interno */
+    font-size: 16px; /* Define o tamanho da fonte */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+/* Estilo para o link da barra de navegação */
+#newAno {
+    margin: 0; /* Remove a margem padrão */
+    border: 1px solid rgb(35, 32, 24); /* Define a borda */
+    width: 25%; /* Define a largura como 25% */
+    padding: 10px; /* Define o espaçamento interno */
+    font-size: 16px; /* Define o tamanho da fonte */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+/* Estilo para o link da barra de navegação */
+#newCategoria {
+    margin: 0; /* Remove a margem padrão */
+    border: 1px solid rgb(35, 32, 24); /* Define a borda */
+    width: 25%; /* Define a largura como 25% */
+    padding: 10px; /* Define o espaçamento interno */
+    font-size: 16px; /* Define o tamanho da fonte */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+/* Estilo para o link da barra de navegação */
+#newFabricante {
+    margin: 0; /* Remove a margem padrão */
+    border: 1px solid rgb(35, 32, 24); /* Define a borda */
+    width: 25%; /* Define a largura como 25% */
+    padding: 10px; /* Define o espaçamento interno */
+    font-size: 16px; /* Define o tamanho da fonte */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+/* Estilo para o botão da barra de navegação */
+.addBtn {
+    padding: 9px 10px; /* Define o espaçamento interno */
+    background-color: #722f37; /* Define a cor de fundo */
+    color: white; /* Define a cor do texto */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    font-size: 20px; /* Define o tamanho da fonte */
+    cursor: pointer; /* Adiciona o efeito de cursor */
+    transition: 0.3s; /* Adiciona o efeito de transição */
+    border-radius: 25px; /* Define o raio da borda */
+    text-shadow:1px -1px #cac1c2 /* Adiciona o efeito de sombra */
+}
+
+/* Estilo para o botão da barra de navegação */
+.addBtn:hover {
+    background-color: #047e12; /* Define a cor de fundo */
+    color: white; /* Define a cor do texto */
+    text-shadow:1px -1px #080808 /* Adiciona o efeito de sombra */
+}
+
+/* Estilo para os itens da barra de navegação */
+.items {
+    padding: 10px; /* Define o espaçamento interno */
+    display: flex; /* Adiciona o efeito de linha */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    font-family: cursive; /* Define a fonte do texto */
+    margin-bottom: 20px; /* Define a margem inferior */
+    margin-top:20px; /* Define a margem superior */
+}
+
+/* Estilo para o botão fechar da barra de navegação */
+.close:hover {
+    color: #f44336; /* Define a cor do texto */
+    font-weight: bolder; /* Define o peso da fonte */
+}
+
+table,
+th,
+td { /* Define a tabela, o cabeçalho e a célula */
+    border: 2px solid #722f37; /* Define a borda */
+    border-collapse: collapse; /* Define o colapso da borda */
+    cursor: pointer; /* Adiciona o efeito de cursor */
+    position:relative; /* Define a posição como relativa */
+    padding: 5px 5px 5px 5px; /* Define o espaçamento interno */
+    font-size: 20px; /* Define o tamanho da fonte */
+    color: #722f37; /* Define a cor do texto */
+    font-family: 'Courier New', Courier, monospace; /* Define a fonte do texto */
+    transition: 0.5s; /* Adiciona o efeito de transição */
+    text-align:center; /* Centraliza o texto horizontalmente */
+}
+
+/* Estilo para a tabela, o cabeçalho e a célula */
+table{
+    background-color: white; /* Define a cor de fundo */
+    width: 100%; /* Define a largura como 100% */
+}
+
+/* Estilo para a tabela, o cabeçalho e a célula */
+tr:nth-child(odd){
+    background-color: #ebe9e9; /* Define a cor de fundo */
+}
+
+/* Estilo para a tabela, o cabeçalho e a célula */
+th:nth-child(1){
+    width: 20%; /* Define a largura como 20% */
+}
+
+/* Estilo para a tabela, o cabeçalho e a célula */
+tr:hover {
+    background: rgb(200, 199, 199); /* Define a cor de fundo */
+}
+
+/* Estilo para a tabela, o cabeçalho e a célula */
+.content {
+    display: flex; /* Adiciona o efeito de linha */
+    flex-direction:column; /* Adiciona o efeito de coluna */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: flex-start; /* Centraliza o conteúdo verticalmente */
+    margin-top: 20px; /* Define a margem superior */
+    margin-bottom: 20px; /* Define a margem inferior */
+}
+
+/* Estilo para o giff apresentado */
+.giff {
+    display: block; /* Adiciona o efeito de bloco */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    margin: 20px auto; /* Define a margem superior e inferior */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+/* Estilo para o giff apresentado */
+.giff img {
+    max-width: 100%; /* Define a largura máxima como 100% */
+    max-height: 100%; /* Define a altura máxima como 100% */
+}
+
+/* Estilo para o os fatos felinos" */
+#catFacts {
+    display: flex; /* Adiciona o efeito de linha */
+    flex-direction: column; /* Adiciona o efeito de coluna */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    padding: 5px; /* Define o espaçamento interno */
+    border: 1px solid #ccc; /* Define a borda */
+    border-radius: 5px; /* Define o raio da borda */
+    background-color: #f9f9f9; /* Define a cor de fundo */
+    margin: 0 auto; /* Adicione esta linha para centralizar horizontalmente */
+    max-width: 800px; /* Defina a largura máxima desejada */
+}
+
+/* Estilo para o título da tabela "Atualização de Ano" */
+h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Cor do texto */
+    background-color: #f2f2f2; /* Cor de fundo */
+    padding: 10px; /* Espaçamento interno */
+    text-align: center; /* Centralizar o texto horizontalmente */
+    max-width: 600px; /* Largura máxima desejada */
+    margin: 0 auto; /* Centralizar na tela horizontalmente */
+    margin-top: 20px; /* Adicionar um espaço superior opcional */
+}
+
+/* Estilo para o botão "Atualizar" */
+button {
+    font-size: 18px; /* Tamanho da fonte */
+    padding: 12px 24px; /* Espaçamento interno (altura e largura) */
+}
+
+/* Estilo para a seção do botão "Atualizar" */
+.update-button-section {
+    text-align: center; /* Centralizar o botão horizontalmente */
+    margin-top: 20px; /* Adicionar um espaço superior opcional */
+    margin-bottom: 100px;
+}
+
+/* Estilo para a tabela de atualização */
+.update-table {
+    max-width: 80%; /* Define a largura máxima como 80% */
+    margin: 0 auto; /* Centraliza a tabela horizontalmente */
+}
+
+/* Estilo para a seção de atualização */
+.updateYear {
+    margin-bottom: 20px; /* Define a margem inferior desejada (por exemplo, 20px) */
+}
+
+/* Estilo para a tabela de adição de notas */
+.addNote {
+    margin-top: 20px; /* Define a margem superior desejada (por exemplo, 20px) */
+    padding: 20px; /* Define o espaçamento interno */
+    background-color: #f9f9f9; /* Define a cor de fundo */
+}
+
+  /* Estilo para a div que contém a tabela e o botão */
+.table-container {
+    display: flex; /* Adiciona o efeito de linha */
+    flex-direction: column; /* Adiciona o efeito de coluna */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    margin-top: 10px; /* Define a margem superior */
+}
+
+  /* Estilo para o botão de adição */
+.addNote button {
+    margin-top: 10px; /* Define a margem superior */
+}
+
+/* Estilo para a seção de consulta de informações do vinho */
+.getWineInfo {
+    margin-top: 20px; /* Define a margem superior */
+    padding: 20px; /* Define o espaçamento interno */
+    background-color: #f9f9f9; /* Define a cor de fundo */
+    border: 1px solid #ccc; /* Define a borda */
+    border-radius: 5px; /* Define o raio da borda */
+    text-align: center; /* Centraliza o texto horizontalmente */
+}
+
+/* Estilo para o título da seção de consulta */
+.getWineInfo h2 {
+    font-size: 18px; /* Define o tamanho da fonte */
+    font-weight: bold; /* Define o contorno da fonte */
+    color: #333; /* Define a cor do texto */
+    margin-bottom: 10px; /* Define a margem inferior */
+}
+
+/* Estilo para o formulário de consulta */
+.wine-info-form {
+    display: flex; /* Adiciona o efeito de linha */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    margin-bottom: 10px; /* Define a margem inferior */
+}
+
+/* Estilo para o campo de entrada de texto */
+.wine-info-form input[type="text"] {
+    padding: 10px; /* Define o espaçamento interno */
+    width: 60%; /* Define a largura como 60% */
+    border: 1px solid #ccc; /* Define a borda */
+    border-radius: 5px; /* Define o raio da borda */
+    font-size: 16px; /* Define o tamanho da fonte */
+    margin-right: 10px; /* Define a margem direita */
+}
+
+/* Estilo para o botão de consulta */
+.wine-info-form button {
+    padding: 10px 20px; /* Define o espaçamento interno */
+    background-color: #722f37; /* Define a cor de fundo */
+    color: white; /* Define a cor do texto */
+    font-size: 16px; /* Define o tamanho da fonte */
+    border: none; /* Remove a borda */
+    border-radius: 5px; /* Define o raio da borda */
+    cursor: pointer; /* Adiciona o efeito de cursor */
+    transition: background-color 0.3s; /* Adiciona o efeito de transição */
+}
+
+.wine-info-form button:hover {
+    background-color: #047e12;
+}
+
+/* Estilo para o resultado da consulta */
+#wineInfoResult {
+    font-size: 16px; /* Define o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+    margin-top: 10px; /* Define a margem superior */
+}

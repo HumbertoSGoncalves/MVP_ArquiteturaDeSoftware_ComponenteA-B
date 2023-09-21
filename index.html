@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title>MVP - Humberto</title>
+</head>
+
+<body>
+<!-- Título e imagem para apresentação da Adega virtual -->
+    <header>
+        <div class="title">
+            <h2>Adega Virtual Para Felinos</h2>
+        </div>
+        <div class="banner">
+            <img src="https://i.ytimg.com/vi/KzN-iStmYZA/sddefault.jpg"
+                alt="y">
+        </div>
+    </header>
+
+<!-- Dados para inclusão de novo vinho na adega -->
+    <section class="newItem">
+        <input type="text" id="newVinho" placeholder="Vinho">
+        <input type="text" id="newUva" placeholder="Uva">
+        <input type="text" id="newAno" placeholder="Ano">
+        <input type="text" id="newCategoria" placeholder="Categoria">
+        <input type="text" id="newFabricante" placeholder="Fabricante">
+        <span onclick="newItem()" class="addBtn">Incluir na adega</span>
+    </section>
+
+<!-- Tabela contendo vinhos existentes -->
+    <section class="items">
+        <table id="myTable">
+            <tr>
+                <th>Vinho</th>
+                <th>Uva</th>
+                <th>Ano</th>
+                <th>Categoria</th>
+                <th>Fabricante</th>
+                <th><img src="https://cdn-icons-png.flaticon.com/512/126/126468.png" width="15px" height="15px"></th>
+            </tr>
+        </table>
+    </section>
+
+<!-- Tabela para atualização do ano do vinho -->
+    <section class="updateYear">
+        <h2>Atualização de Ano</h2>
+        <table class="update-table">
+            <tr>
+                <th>ID do Vinho</th>
+                <th>Novo Ano</th>
+            </tr>
+            <tr>
+                <td><input type="number" id="updateVinhoId" placeholder="ID do Vinho"></td>
+                <td><input type="number" id="newYear" placeholder="Novo Ano"></td>
+            </tr>
+        </table>
+    </section>
+
+<!-- Seção para o botão "Atualizar" -->
+<section class="update-button-section">
+    <button onclick="updateYear()" class="update-button">Atualizar</button>
+</section>
+
+<!-- Tabela para adição de notas -->
+    <section class="addNote">
+        <h2>Adicionar Nota</h2>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>ID do Vinho</th>
+                    <th>Texto da Nota</th>
+                    <td><input type="number" id="addNoteVinhoId" placeholder="ID do Vinho"></td>
+                    <td><input type="text" id="addNoteTexto" placeholder="Texto da Nota"></td>
+                </tr>
+            </table>
+            <button onclick="addNote()">Adicionar</button>
+        </div>
+    </section>
+
+<!-- Consulta individual dos vinhos da adega -->
+    <section class="getWineInfo">
+        <h2>Consultar Informações do Vinho</h2>
+        <div class="wine-info-form">
+            <input type="text" id="wineName" placeholder="Nome do Vinho">
+            <button onclick="getWineInfo()">Consultar</button>
+        </div>
+        <div id="wineInfoResult"></div>
+    </section>
+    
+<!-- Adiciona elementos iterativos na página -->
+    <div class="content">
+        <section id="catFacts" class="catFacts">
+            <h3>Cat Facts</h3>
+        </section>
+        <section id="catGifs" class="giff">
+            <h3>Gatos</h3>
+            <img id="catGifImg" src="" alt="Imagem de Gato">
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
