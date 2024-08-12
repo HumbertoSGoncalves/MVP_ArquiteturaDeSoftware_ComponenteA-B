@@ -1,26 +1,26 @@
-# MVP Frontend - Adega Virtual Para Felinos
+# MVP Frontend - Virtual Wine Cellar for Felines
 
-Este projeto contempla os requisitos para a entrega do MVP da **Sprint III: Arquitetura de Software** do curso de Pós Graduação em Engenharia de Software da PUC RIO.
+This project encompasses the requirements for the delivery of the MVP for **Sprint III: Software Architecture** of the postgraduate program in Software Engineering at PUC RIO.
 
-O objetivo é utilizar do conteúdo ensinado durante as aulas para a criação de um sistema web em que seus diferentes componentes atuem como sistemas autônomos.
-Este é um projeto de uma adega virtual para felinos com uma interface web simples. Ele permite que você gerencie vinhos, adicione notas e consulte informações sobre vinhos. Também apresenta fatos e imagens engraçadas de gatos usando APIs externas.
+The objective is to use the content taught during the classes to create a web system where its different components function as autonomous systems. This project is a virtual wine cellar for felines with a simple web interface. It allows you to manage wines, add notes, and view information about wines. It also features fun facts and images of cats using external APIs.
 
-Para os códigos aqui encaminhados, será explorado o **componente A do MVP, assim como o B1 e B2, que são as APIs externas utilizadas**.
+For the code provided here, **Component A of the MVP will be explored, along with B1 and B2, which are the external APIs used**.
 
 ## Componente A - Frontend
-O componente A escolhido para o projeto é o frontend que consiste em arquivos HTML (index.html), CSS (styles.css), e JavaScript (scripts.js). 
 
-Todos estes arquivos fazem parte deste mesmo repositório.
+The chosen Component A for the project is the frontend, which consists of HTML files (index.html), CSS files (styles.css), and JavaScript files (scripts.js).
+
+All these files are part of the same repository.
 
 ## Componentes B1 e B2 - Externos
 
-- **The Cat API**: Oferece acesso gratuito a uma grande variedade de imagens de gatos para fins de desenvolvimento e entretenimento.
-Para obter imagens aleatórias de gatos, você pode fazer uma solicitação GET para o seguinte endpoint da API:
+- **The Cat API**: Offers free access to a wide variety of cat images for development and entertainment purposes.
+To get random cat images, you can make a GET request to the following API endpoint:
 ```
 https://api.thecatapi.com/v1/images/search
 ```
-Não é necessário incluir uma chave de API na solicitação, pois este endpoint permite acesso público.
-Aqui está um exemplo de como fazer uma solicitação para obter uma imagem aleatória de um gato usando a API The Cat API em Python:
+No API key is required for the request, as this endpoint allows public access.
+Here is an example of how to make a request to get a random cat image using The Cat API in Python:
 ```
 import requests
 
@@ -33,17 +33,17 @@ if response.status_code == 200:
 else:
     print("Não foi possível obter a imagem do gato.")
 ```
-Lembre-se de que, embora não seja necessário usar uma chave de API para este endpoint, você ainda deve respeitar os termos de uso da API The Cat API conforme descrito em https://thecatapi.com/terms.
+Remember that, although an API key is not required for this endpoint, you should still adhere to the terms of use of The Cat API as described in:
+https://thecatapi.com/terms.
 
-Para mais informações sobre a API The Cat API, incluindo detalhes sobre outros endpoints e recursos disponíveis, consulte a documentação oficial em https://thecatapi.com/api-docs/v1.
+For more information about The Cat API, including details about other endpoints and available features, refer to the official documentation at [https://thecatapi.com/api-docs/v1](https://thecatapi.com/api-docs/v1).
 
-- **Cat fact API**: Fornece gratuitamente informações divertidas e cativantes sobre gatos, tornando-a uma ótima escolha para projetos relacionados a esses adoráveis animais.
-Para obter fatos sobre gatos, você pode fazer uma solicitação GET para o seguinte endpoint da API:
+- **Cat fact API**: Provides free, fun, and engaging information about cats, making it a great choice for projects related to these adorable animals. To get facts about cats, you can make a GET request to the following API endpoint:
 ```
 https://cat-fact.herokuapp.com/facts/
 ```
-Este endpoint permite acesso público e não requer uma chave de API para ser incluída na solicitação.
-Aqui está um exemplo de como fazer uma solicitação para obter um fato aleatório sobre gatos usando a API Cat Fact em Python:
+This endpoint allows public access and does not require an API key to be included in the request.
+Here is an example of how to make a request to get a random cat fact using the Cat Fact API in Python:
 ```
 import requests
 
@@ -56,49 +56,45 @@ if response.status_code == 200:
 else:
     print("Não foi possível obter o fato sobre gatos.")
 ```
-Certifique-se de respeitar os termos de uso da API Cat Fact conforme descrito em https://cat-fact.herokuapp.com/terms.
-Para mais informações sobre a API Cat Fact, incluindo detalhes sobre outros endpoints e recursos disponíveis, consulte a documentação oficial em https://cat-fact.herokuapp.com/#/.
-
+Make sure to adhere to the terms of use of the Cat Fact API as described at [https://cat-fact.herokuapp.com/terms](https://cat-fact.herokuapp.com/terms). For more information about the Cat Fact API, including details about other endpoints and available features, refer to the official documentation at [https://cat-fact.herokuapp.com/#/](https://cat-fact.herokuapp.com/#/).
 
 ---
-## Como executar
+## How to Run
 
-Basta clonar o projeto e abrir o arquivo index.html no browser de sua preferência para a execução.
+Simply clone the project and open the `index.html` file in your preferred browser to run it.
 
-## Executando com Docker
+## Running with Docker
 
-Você pode executar o projeto em um contêiner Docker. 
-Certifique-se de ter o Docker instalado no seu sistema.
+You can run the project in a Docker container. 
+Make sure you have Docker installed on your system.
 
-Clone o repositório para o seu computador (se já não o fez):
+Clone the repository to your computer (if you haven’t already):
 
 ```
 git clone https://github.com/seu-usuario/nome-do-repositorio.git
 ```
 
-1. Navegue até o diretório do projeto:
+1. Navigate to the project directory:
 ```
 cd nome-do-repositorio
 ```
 
-2. Construa a imagem Docker (o nome da imagem é de sua escolha, utilizei "componente_a"no exemplo abaixo):
+2. Build the Docker image (the name of the image is up to you; I used "componente_a" in the example below):
 ```
 docker build -t nome_da_imagem .
 ```
 
-3. Execute o contêiner Docker:
+3. Run the docker container:
 
 ```
 docker run -p 8080:80 nome_da_imagem
 ```
 
-4. O aplicativo estará acessível no seu navegador em http://localhost:8080.
+4. The application will be accessible in your browser at http://localhost:8080.
 
 
-Lembre-se de que você pode personalizar o nome da imagem Docker (nome_da_imagem).
+Remember that you can customize the Docker image name (`image_name`).
 
-Para encerrar a execução do contêiner, você pode pressionar Ctrl+C no terminal onde o contêiner está sendo executado.
+To stop the container, you can press Ctrl+C in the terminal where the container is running.
 
-Independente do modo de execução, recomendo estar com o backend rodando para que seja possível performar os testes do frontend com maior consistência, de forma a permitir com que atualizações na página persistam os dados incluídos previamente.
-
-Componente do backend: 
+Regardless of the execution mode, I recommend having the backend running to ensure more consistent frontend testing, allowing page updates to persist previously entered data.
